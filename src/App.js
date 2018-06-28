@@ -9,31 +9,54 @@ import { Route } from 'react-router-dom';
 import MonkeyHang from './UI/SvgAnim/MonkeyHang/MonkeyHang';
 
 class App extends Component {
+  
+  state = {
+    mainMenu : [{
+    title: 'GAMES',
+    },
+    {
+    title: 'APP',
+   }],
+   languages: [{
+     language: 'English'
+    },
+    {
+      language: 'Hindi'
+     },
+     {
+      language: 'Marathi'
+     },
+     {
+      language: 'Punjabi'
+     }]
+  }//state
+
+
   render() {
     return (
-      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
        {/*A header asection*/}
-        <Header />
+        <Header items={this.state.mainMenu}/>
         {/* side drawer in the layout */}
-        <Drawer />
+        <Drawer items={this.state.mainMenu}/>
 
-        <div class="android-content mdl-layout__content">
+        <div className="android-content mdl-layout__content">
           <a name="top">&nbsp;</a>
           <Route path="/" exact component={Main} />
           <MonkeyHang />
           <BelowMain />
           
-          <div class="android-wear-section">
-            <div class="android-wear-band">
-              <div class="android-wear-band-text">
-                <div class="mdl-typography--display-2 mdl-typography--font-thin">The best of Google built in</div>
-                <p class="mdl-typography--headline mdl-typography--font-thin">
+          <div className="android-wear-section">
+            <div className="android-wear-band">
+              <div className="android-wear-band-text">
+                <div className="mdl-typography--display-2 mdl-typography--font-thin">The best of Google built in</div>
+                <p className="mdl-typography--headline mdl-typography--font-thin">
                   Android works perfectly with your favourite apps like Google Maps,
                   Calendar and YouTube.
         </p>
                 <p>
-                  <a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="">
-                    See what's new in the Play Store&nbsp;<i class="material-icons">chevron_right</i>
+                  <a className="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="">
+                    See what's new in the Play Store&nbsp;<i className="material-icons">chevron_right</i>
                   </a>
                 </p>
               </div>

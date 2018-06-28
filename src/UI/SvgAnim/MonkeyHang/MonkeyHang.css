@@ -19,9 +19,9 @@
   }
   
   .monkey-animation-Down {
-    animation: downAnimation 6.5s infinite;
+    animation: downAnimation 6.5s 1;
     animation-fill-mode: both;
-    animation-delay: 0.5s;
+    animation-delay: 0.7s;
   }
   
   .st0{fill:#C11F1F;}
