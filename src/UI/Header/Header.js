@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 // import androidlogo from '../../assets/images/android-logo.png'
 const Header = (props) => {
 
@@ -24,7 +25,7 @@ const Header = (props) => {
                     <nav className="android-navigation mdl-navigation">
                         {
                             props.items.map((item,i)=>{
-                                return <a key={i} className="mdl-navigation__link mdl-typography--text-uppercase" href="">{item.title}</a>
+                                return <NavLink className="mdl-navigation__link mdl-typography--text-uppercase" key={i} to={item.link} activeClassName="active">{item.title}</NavLink>
                             })
                         }
 
